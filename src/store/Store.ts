@@ -4,5 +4,7 @@ import pokemonSlice from "./Reducer";
 export default configureStore({
   reducer: {
     pokemons: pokemonSlice,
+    pageSize: pokemonSlice,
+    page: pokemonSlice,
   },
 });

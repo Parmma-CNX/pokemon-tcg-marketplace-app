@@ -8,11 +8,11 @@ function Header() {
           TCG Marketplace
         </div>
 
-        <div className="absolute top-[48px] left-1/2 transform -translate-x-1/2 transform z-10">
+        <div className="absolute top-[48px] left-1/2 transform -translate-x-1/2 z-30">
           <img src={pokemonLogo} alt="My SVG Icon" />
         </div>
 
-        <div className="absolute top-[46px] left-1/2 transform -translate-x-1/2 transform w-[52px] h-[52px] bg-white rounded-full z-0"></div>
+        <div className="absolute top-[46px] left-1/2 transform -translate-x-1/2 w-[52px] h-[52px] bg-white rounded-full z-20"></div>
       </div>
     </>
   );
