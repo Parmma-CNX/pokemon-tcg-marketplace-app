@@ -1,8 +1,10 @@
-import { createSlice, current } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import { pokemonData } from "../types/pokemon-card";
 
 const initialState: pokemonData = {
   pokemons: [],
+  page: 1,
+  pageSize: 9,
 };
 
 const pokemonSlice = createSlice({
@@ -11,10 +13,12 @@ const pokemonSlice = createSlice({
   reducers: {
     addPokemon: (state, action) => {
       state.pokemons = action.payload;
-      console.log("current state --->", current(state));
+    },
+    addPageSize: (state, action) => {
+      state.pageSize = action.payload;
     },
   },
 });
 
-export const { addPokemon } = pokemonSlice.actions;
+export const { addPokemon, addPageSize } = pokemonSlice.actions;
 export default pokemonSlice.reducer;

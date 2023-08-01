@@ -23,13 +23,18 @@ export async function fetchPokemonCards(
     });
 
     console.log("response", response);
-    return response.data.data.map((card: PokemonCardType) => ({
+
+    const resData = response.data.data.map((card: PokemonCardType) => ({
+      id: card.id,
       name: card.name,
       types: card.types,
       set: card.set,
       rarity: card.rarity,
       images: card.images,
+      prices: card.cardmarket.prices,
     }));
+
+    return resData;
   } catch (error) {
     throw new Error("Failed to fetch Pokémon cards.");
   }
